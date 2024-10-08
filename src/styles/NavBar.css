@@ -1,0 +1,146 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+	background-color: rgb(32, 31, 49); /* Darker background color */
+	padding: 1rem 2rem;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Softer shadow for a modern look */
+	position: relative;
+}
+
+.navbar-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	position: relative;
+}
+
+.navbar-logo {
+	color: #ecf0f1; /* Light gray */
+	font-size: 1.8rem;
+	font-weight: 700; /* Bold */
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+.menu-toggle {
+	display: none; /* Hidden by default */
+	background: none;
+	border: none;
+	color: #ecf0f1; /* Light gray */
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.navbar-menu {
+	list-style: none;
+	display: flex;
+	gap: 1.5rem;
+	transition: all 0.3s ease; /* Add smooth transition for mobile menu */
+}
+
+.navbar-item {
+	margin: 0;
+}
+
+.navbar-link {
+	color: #ecf0f1; /* Light gray */
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	font-weight: 400; /* Normal */
+	transition: background-color 0.3s, color 0.3s;
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+}
+
+.navbar-link:hover,
+.navbar-link:focus-visible {
+	background-color: #34495e; /* Slightly lighter blue-gray */
+	border-radius: 4px;
+	color: #ffffff; /* White */
+	font-weight: 600;
+}
+
+.search-container {
+	display: flex;
+	align-items: center;
+	margin-left: 30px;
+	flex: 0.9; /* Allow search container to grow */
+}
+
+.search-input {
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #333;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Softer box-shadow for modern look */
+	transition: box-shadow 0.3s;
+	width: 100%; /* Make search input take full width of the container */
+	max-width: 400px; /* Maximum width to prevent it from getting too large */
+}
+
+.search-input:focus {
+	outline: none;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Cart Icon and Checkout Styles */
+.navbar-link .fas.fa-shopping-cart {
+	font-size: 1.2rem;
+	margin-right: 5px; /* Add some space between icon and text */
+}
+
+.cart-text {
+	margin-left: 5px;
+}
+
+.cart-count {
+	background-color: #e74c3c; /* Red for alerting item count */
+	color: white;
+	font-size: 0.8rem;
+	padding: 2px 6px;
+	border-radius: 50%;
+	position: relative;
+	top: -8px;
+	left: -5px;
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+	.navbar-menu {
+		display: none; /* Hidden by default on small screens */
+		flex-direction: column;
+		gap: 0.5rem;
+		position: absolute;
+		top: 60px; /* Adjust based on your navbar height */
+		right: 0;
+		background-color: rgb(32, 31, 49); /* Match navbar background */
+		width: 100%;
+		padding: 1rem;
+		z-index: 1000;
+	}
+
+	.navbar-menu.active {
+		display: flex; /* Show when active */
+		transition: all 0.3s ease; /* Smooth transition for mobile menu */
+	}
+
+	.menu-toggle {
+		display: block;
+	}
+
+	/* Optional: Animating the menu-toggle button (hamburger to X) */
+	.menu-toggle.active::before {
+		content: "✖"; /* Display "X" icon when active */
+	}
+}

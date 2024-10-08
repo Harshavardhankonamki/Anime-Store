@@ -1,0 +1,125 @@
+/**
+ * Body.css
+ *
+ * @format
+ */
+
+.cont {
+	width: 90%;
+	height: 100vh; /* Full viewport height */
+	margin: 0 auto; /* Center horizontally */
+	overflow: hidden; /* Ensure no overflow */
+}
+
+.body-section {
+	display: flex;
+	justify-content: space-between; /* Space between text and image */
+	align-items: center; /* Center items vertically */
+	height: 90%;
+	padding: 20px;
+	border-radius: 10px;
+	margin: 0 auto; /* Center horizontally */
+}
+
+.body-text {
+	width: 45%; /* Adjusted width for better balance */
+	padding: 20px;
+	box-sizing: border-box;
+	color: #fff; /* Text color for visibility against dark backgrounds */
+	background-color: rgba(
+		32,
+		31,
+		49,
+		0.8
+	); /* Semi-transparent background for better readability */
+	border-radius: 10px;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add text shadow for better contrast */
+}
+
+.animated-h1 {
+	font-size: 2.5rem; /* Larger font size for the main heading */
+	margin-bottom: 10px;
+	color: yellow; /* Color for the main heading */
+	overflow: hidden; /* Hide anything outside the h1 box */
+}
+
+.animated-h1 span {
+	display: inline-block;
+	opacity: 0;
+	transform: translateX(1em); /* Start the letters off the screen */
+	animation: fadeInUp 1.5s forwards; /* End the letters off the screen */
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateX(1em);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.body-text h3 {
+	font-size: 1.5rem; /* Slightly smaller than h2 */
+	margin-bottom: 6px;
+	color: cyan; /* Space below the subtitle */
+}
+
+.body-text p {
+	font-size: 1rem; /* Standard font size for paragraphs */
+	line-height: 1.6; /* Increase line height for better readability */
+	margin-top: 10px;
+	color: cyan;
+}
+
+.search-input {
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #333;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s;
+	width: 100%; /* Make search input take full width of the container */
+	max-width: 400px; /* Maximum width to prevent it from getting too large */
+	margin-top: 15px; /* Space above the search bar */
+}
+
+.search-input:focus {
+	outline: none;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #ff5722; /* Custom color to fit your theme */
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.search-btn {
+	margin-left: 5px;
+	margin-top: 15px;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #ff5722; /* Custom color to fit your theme */
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	height: 40px;
+}
+
+.body-image {
+	width: 50%; /* Takes up 50% of the width */
+	height: 70%;
+	background: url("../styles/luffy.png") no-repeat center center; /* Center the image */
+	background-size: contain; /* Cover the container */
+	border-radius: 10px;
+}
